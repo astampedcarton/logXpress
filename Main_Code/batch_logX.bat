@@ -1,0 +1,1 @@
+"C:\My Projects\projects\delphi\XE10\LogXpress\new\LogExpress.exe" -batch "C:\TEMP\log_Test\BIG_f14.2_1.2.log"

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8652BA45-D53F-442E-870D-DBA4D0B671F2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LogExpress.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\..\..\..\comps\7_kcontrols_1.7\demos\kgrid\kgriddemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LogExpress">
+        <MSBuild Projects="LogExpress.dproj"/>
+    </Target>
+    <Target Name="LogExpress:Clean">
+        <MSBuild Projects="LogExpress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogExpress:Make">
+        <MSBuild Projects="LogExpress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="kgriddemo">
+        <MSBuild Projects="..\..\..\..\..\comps\7_kcontrols_1.7\demos\kgrid\kgriddemo.dproj"/>
+    </Target>
+    <Target Name="kgriddemo:Clean">
+        <MSBuild Projects="..\..\..\..\..\comps\7_kcontrols_1.7\demos\kgrid\kgriddemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="kgriddemo:Make">
+        <MSBuild Projects="..\..\..\..\..\comps\7_kcontrols_1.7\demos\kgrid\kgriddemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LogExpress;kgriddemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LogExpress:Clean;kgriddemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LogExpress:Make;kgriddemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

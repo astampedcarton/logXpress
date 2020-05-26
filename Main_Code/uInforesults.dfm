@@ -1,0 +1,186 @@
+object fmInforesults: TfmInforesults
+  Left = 1635
+  Top = 868
+  AlphaBlend = True
+  BorderStyle = bsToolWindow
+  Caption = 'Log Results'
+  ClientHeight = 274
+  ClientWidth = 237
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Courier New'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  PopupMode = pmAuto
+  Position = poDesigned
+  SnapBuffer = 20
+  OnClick = FormClick
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 14
+  object sgToCheck: TStringGrid
+    Left = 0
+    Top = 38
+    Width = 237
+    Height = 236
+    Align = alClient
+    ColCount = 2
+    DefaultRowHeight = 18
+    DrawingStyle = gdsGradient
+    FixedCols = 0
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goTabs, goRowSelect]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = sgToCheckClick
+    OnDblClick = sgToCheckDblClick
+    OnMouseEnter = sgToCheckMouseEnter
+    OnMouseLeave = sgToCheckMouseLeave
+    OnMouseMove = sgToCheckMouseMove
+    OnSelectCell = sgToCheckSelectCell
+  end
+  object pnlgrh1: TJvGradientHeaderPanel
+    Left = 0
+    Top = 0
+    Width = 237
+    Height = 38
+    GradientStartColor = clBtnFace
+    GradientEndColor = clBtnFace
+    GradientStyle = grVertical
+    LabelHint = 'Click to keep Open'
+    LabelCaption = 'Put your text here ...'
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWhite
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    LabelAlignment = taLeftJustify
+    Align = alTop
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Font.Style = []
+    TabOrder = 1
+    OnClick = pnlgrh1Click
+    object lbReadinfo: TLabel
+      Left = 0
+      Top = 26
+      Width = 237
+      Height = 12
+      Align = alBottom
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      ExplicitWidth = 3
+    end
+  end
+  object bbHideMain: TrkGlassButton
+    Left = 3
+    Top = 0
+    Width = 70
+    Height = 22
+    AltFocus = True
+    AltRender = False
+    Caption = 'Show Main'
+    Color = 11425536
+    ColorDown = 12615680
+    ColorFocused = 8416256
+    ColorFrame = 13001472
+    ColorShadow = 11425536
+    ColorDisabled = 13001472
+    DropDownAlignment = paLeft
+    Flat = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -10
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Glossy = True
+    GlossyLevel = 60
+    LightHeight = 27
+    TabOrder = 2
+    TextAlign = taCenter
+    OnClick = bbHideMainClick
+  end
+  object bbMe: TrkGlassButton
+    Left = 165
+    Top = 0
+    Width = 70
+    Height = 22
+    AltFocus = True
+    AltRender = False
+    Caption = 'Hide Me'
+    Color = 11425536
+    ColorDown = 12615680
+    ColorFocused = 8416256
+    ColorFrame = 13001472
+    ColorShadow = 11425536
+    ColorDisabled = 13001472
+    DropDownAlignment = paLeft
+    Flat = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -10
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Glossy = True
+    GlossyLevel = 60
+    LightHeight = 27
+    TabOrder = 3
+    TextAlign = taCenter
+    OnClick = bbMeClick
+  end
+  object chkTransparent: TCheckBox
+    Left = 79
+    Top = 3
+    Width = 79
+    Height = 17
+    ParentCustomHint = False
+    BiDiMode = bdLeftToRight
+    Caption = 'Transparent'
+    Color = 8404992
+    Ctl3D = True
+    DoubleBuffered = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentCtl3D = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 4
+    OnClick = chkTransparentClick
+  end
+  object Timer1: TTimer
+    Interval = 200
+    OnTimer = Timer1Timer
+    Left = 184
+    Top = 56
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 800
+    OnTimer = Timer2Timer
+    Left = 216
+    Top = 440
+  end
+end
