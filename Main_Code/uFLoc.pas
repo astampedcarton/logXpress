@@ -18,20 +18,13 @@ type
     Label2: TLabel;
     edFLoc: TEdit;
     bbFLoc: TButton;
-    bbRead: TrkGlassButton;
-    bbStop: TrkGlassButton;
-    bbOk: TrkGlassButton;
-    bbClose: TrkGlassButton;
-    bbCancel: TrkGlassButton;
     OpenDialog: TOpenDialog;
     il1: TImageList;
     Panel1: TPanel;
     pgRead: TProgressBar;
-    bbClearCounters: TrkGlassButton;
     lbProgress: TLabel;
     lbInfo: TLabel;
     ckInclsubfolder: TCheckBox;
-    bbUsefull: TrkGlassButton;
     actIndTree: TActivityIndicator;
     pgFiles: TPageControl;
     tbResults: TTabSheet;
@@ -41,9 +34,15 @@ type
     ckMonitorFiles: TCheckBox;
     ckMonitorFile: TCheckListBox;
     Panel2: TPanel;
-    bbSetFileMon: TrkGlassButton;
     tmFileMon: TTimer;
-    bbGetFiles: TrkGlassButton;
+    bbOk: TButton;
+    bbClose: TButton;
+    bbRead: TButton;
+    bbUsefull: TButton;
+    bbClearCounters: TButton;
+    bbGetFiles: TButton;
+    bbSetFileMon: TButton;
+    bbStop: TButton;
     procedure bbCloseClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure bbFLocClick(Sender: TObject);
@@ -71,6 +70,7 @@ type
     procedure tmFileMonTimer(Sender: TObject);
     procedure bbSetFilegineMonClick(Sender: TObject);
     procedure bbGetFilesClick(Sender: TObject);
+    procedure bbSetFileMonClick(Sender: TObject);
   private
     { Private declarations }
      asPrev : Ansistring;
@@ -395,6 +395,11 @@ begin
     bbSetFileMon.Caption := 'Start File Monitor';
   end;
  end;
+procedure TfrmFLoc.bbSetFileMonClick(Sender: TObject);
+begin
+
+end;
+
 //------------------------------------------------------------------------------
 procedure TfrmFLoc.bbStopClick(Sender: TObject);
 begin
@@ -476,7 +481,7 @@ begin
   edFLoc.Enabled := false;
   bbFLoc.Enabled := false;
   bbOk.Enabled   := false;
-  bbCancel.Enabled := false;
+  //bbCancel.Enabled := false;
   sleep(500);
   fmoptmenu.SetFloc(edFLoc.text);
   fmoptmenu.BatchforceRead(nil);
@@ -510,7 +515,7 @@ begin
   edFLoc.Enabled   := true;
   bbFLoc.Enabled   := true;
   bbOk.Enabled     := true;
-  bbCancel.Enabled := true;
+  //bbCancel.Enabled := true;
   sleep(500);
   fmoptmenu.SetFloc(edFLoc.text);
 //  fmoptmenu.BatchforceRead(nil);

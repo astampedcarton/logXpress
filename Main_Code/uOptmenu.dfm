@@ -52,186 +52,7 @@ object fmoptmenu: Tfmoptmenu
     TabOrder = 0
     OnDblClick = pnlMenuDblClick
     OnMouseDown = pnlMenuMouseDown
-    object bbClearCounters: TrkGlassButton
-      Left = 23
-      Top = 99
-      Width = 105
-      Height = 40
-      Hint = 'Clears the Counters'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Clear Counters'
-      Color = 16744448
-      ColorDown = 12615680
-      ColorFocused = 8416256
-      ColorFrame = 16744448
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 2
-      TextAlign = taCenter
-      OnClick = bbClearCountersClick
-    end
-    object bbForceread: TrkGlassButton
-      Left = 23
-      Top = 145
-      Width = 105
-      Height = 40
-      Hint = 'Read the current file again'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Force Read'
-      Color = 16744448
-      ColorDown = 12615680
-      ColorFocused = 8416256
-      ColorFrame = 16744448
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 3
-      TextAlign = taCenter
-      OnClick = bbForcereadClick
-    end
-    object bbReadfolder: TrkGlassButton
-      Left = 23
-      Top = 191
-      Width = 105
-      Height = 40
-      Hint = 'Read log files in a given folder'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Read Folders'
-      Color = 34816
-      ColorDown = 5384598
-      ColorFocused = 34816
-      ColorFrame = clGreen
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 1
-      TextAlign = taCenter
-      OnClick = bbReadfolderClick
-    end
-    object bbReadfromlocation: TrkGlassButton
-      Left = 23
-      Top = 53
-      Width = 105
-      Height = 40
-      Hint = 'Set the file that needs to be read'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Read From ...'
-      Color = 16744448
-      ColorDown = 12615680
-      ColorFocused = 8416256
-      ColorFrame = 16744448
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 0
-      TextAlign = taCenter
-      OnClick = bbReadfromlocationClick
-    end
-    object bbClose: TrkGlassButton
-      Left = 18
-      Top = 641
-      Width = 105
-      Height = 80
-      Hint = 'Close the application'
-      AltFocus = False
-      AltRender = False
-      Caption = 'Close'
-      Color = 16744448
-      ColorDown = 12615680
-      ColorFocused = 8416256
-      ColorFrame = 16744448
-      ColorDisabled = 16744448
-      DropDownAlignment = paLeft
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -15
-      Font.Name = 'Arial Unicode MS'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 90
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 4
-      TextAlign = taCenter
-      OnClick = bbCloseClick
-    end
-    object bbMenu: TrkGlassButton
-      Left = 23
-      Top = 7
-      Width = 105
-      Height = 40
-      Hint = 'Additional Menu Options'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Menu'
-      Color = 16744448
-      ColorDown = 12615680
-      ColorFocused = 8416256
-      ColorFrame = 16744448
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
-      TabOrder = 5
-      TextAlign = taCenter
-      OnClick = bbMenuClick
-    end
+    ExplicitTop = -5
     object pnlResults: TPanel
       Left = 0
       Top = 0
@@ -242,73 +63,418 @@ object fmoptmenu: Tfmoptmenu
       BevelOuter = bvNone
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 6
+      TabOrder = 0
       Visible = False
       OnDblClick = pnlResultsDblClick
       OnMouseDown = pnlMenuMouseDown
-      object bbFullmenu: TrkGlassButton
+      object lbError: TOvcRotatedLabel
         Left = 0
-        Top = 705
+        Top = 561
         Width = 11
-        Height = 45
-        Hint = 'Display the full menu'
-        Align = alBottom
-        AltFocus = False
-        AltRender = False
-        Caption = 'FULL'
-        Color = 12615680
-        ColorDown = 12615680
-        ColorFocused = 8416256
-        ColorFrame = 16744448
-        ColorDisabled = 16744448
-        DropDownAlignment = paCenter
-        Font.Charset = ANSI_CHARSET
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Calibri'
+        Font.Name = 'Arial'
         Font.Style = []
-        GlossyLevel = 80
-        GlyphPos = gpLeft
-        ImageOffset = -1
-        Images = fmLogFolder.il1
-        ImageSpacing = 0
-        LightHeight = 27
-        ShadowStyle = ssDrop
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbOther: TOvcRotatedLabel
+        Left = 0
+        Top = 0
+        Width = 11
+        Height = 41
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitWidth = 17
+      end
+      object lbCustom: TOvcRotatedLabel
+        Left = 0
+        Top = 321
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbUninit: TOvcRotatedLabel
+        Left = 0
+        Top = 281
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbConversion: TOvcRotatedLabel
+        Left = 0
+        Top = 241
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbMerge: TOvcRotatedLabel
+        Left = 0
+        Top = 201
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbDivision: TOvcRotatedLabel
+        Left = 0
+        Top = 161
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbInvalid: TOvcRotatedLabel
+        Left = 0
+        Top = 121
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbWarning: TOvcRotatedLabel
+        Left = 0
+        Top = 81
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbmathop: TOvcRotatedLabel
+        Left = 0
+        Top = 41
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitWidth = 17
+      end
+      object lbrepbyval: TOvcRotatedLabel
+        Left = 0
+        Top = 481
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbMissval: TOvcRotatedLabel
+        Left = 0
+        Top = 441
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbnobystate: TOvcRotatedLabel
+        Left = 0
+        Top = 401
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbnoobsdata: TOvcRotatedLabel
+        Left = 0
+        Top = 361
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object lbInfo: TOvcRotatedLabel
+        Left = 0
+        Top = 521
+        Width = 11
+        Height = 40
+        Align = alTop
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        FontAngle = 90
+        ShadowedText = False
+        ExplicitTop = 41
+        ExplicitWidth = 17
+      end
+      object bbFullmenu: TButton
+        Left = 0
+        Top = 704
+        Width = 11
+        Height = 46
+        Hint = 'Display the full menu'
+        Align = alBottom
+        Caption = '^'
         TabOrder = 0
-        TextAlign = taCenter
-        Visible = False
         OnClick = bbFullmenuClick
+        ExplicitWidth = 17
       end
     end
-    object bbSaveSummary: TrkGlassButton
+    object bbMenu: TButton
       Left = 23
-      Top = 237
-      Width = 105
+      Top = 5
+      Width = 110
       Height = 40
-      Hint = 'Save Results to file'
-      AltFocus = True
-      AltRender = False
-      Caption = 'Save Summary'
-      Color = 33023
-      ColorDown = 5384598
-      ColorFocused = 33023
-      ColorFrame = 33023
-      ColorDisabled = 16744448
-      DropDownAlignment = paCenter
-      Flat = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
-      Font.Name = 'Calibri'
+      Hint = 'Additional Menu Options'
+      Caption = 'Menu'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
       Font.Style = [fsBold]
-      Glossy = True
-      GlossyLevel = 80
-      GlyphPos = gpLeft
-      LightHeight = 25
-      ShadowStyle = ssDrop
+      Font.Quality = fqClearTypeNatural
+      ModalResult = 1
+      ParentFont = False
+      PopupMenu = ppMainMenu
+      TabOrder = 1
+      OnClick = bbMenuClick
+    end
+    object bbReadfromlocation: TButton
+      Left = 23
+      Top = 51
+      Width = 110
+      Height = 40
+      Hint = 'Set the file that needs to be read'
+      Caption = 'Read From ...'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ModalResult = 1
+      ParentFont = False
+      PopupMenu = ppMainMenu
+      TabOrder = 2
+      OnClick = bbReadfromlocationClick
+    end
+    object bbClearCounters: TButton
+      Left = 23
+      Top = 97
+      Width = 110
+      Height = 40
+      Caption = 'Clear Counters'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
+      TabOrder = 3
+      OnClick = bbClearCountersClick
+    end
+    object bbForceread: TButton
+      Left = 24
+      Top = 142
+      Width = 110
+      Height = 40
+      Hint = 'Read the current file again'
+      Caption = 'Force Read'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
+      TabOrder = 4
+      OnClick = bbForcereadClick
+    end
+    object bbReadfolder: TButton
+      Left = 23
+      Top = 187
+      Width = 110
+      Height = 40
+      Hint = 'Read log files in a given folder'
+      Caption = 'Read Folders'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
+      TabOrder = 5
+      OnClick = bbReadfolderClick
+    end
+    object bbSaveSummary: TButton
+      Left = 24
+      Top = 233
+      Width = 110
+      Height = 40
+      Caption = 'Save Summary'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
+      PopupMenu = ppSaves
+      TabOrder = 6
+      OnClick = bbSaveSummaryClick
+    end
+    object bbClose: TButton
+      Left = 23
+      Top = 392
+      Width = 110
+      Height = 53
+      Caption = 'Close'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Pitch = fpFixed
+      Font.Style = [fsBold]
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
       TabOrder = 7
-      TextAlign = taCenter
-      OnClick = mnuSaveSummaryClick
+      OnClick = bbCloseClick
     end
   end
   object pnlInfo: TPanel
@@ -328,9 +494,10 @@ object fmoptmenu: Tfmoptmenu
     TabOrder = 1
     OnDblClick = pnlInfoDblClick
     OnMouseDown = pnlMenuMouseDown
+    ExplicitTop = 5
     object spbPin: TSpeedButton
       Left = 159
-      Top = 6
+      Top = 5
       Width = 30
       Height = 30
       Glyph.Data = {
@@ -453,7 +620,7 @@ object fmoptmenu: Tfmoptmenu
     end
     object sgToCheck: TStringGrid
       Left = 3
-      Top = 39
+      Top = 37
       Width = 188
       Height = 406
       Hint = 'Click on a description to view more information'
@@ -490,32 +657,6 @@ object fmoptmenu: Tfmoptmenu
         18
         18)
     end
-    object bbExpand: TrkGlassButton
-      Left = 3
-      Top = 5
-      Width = 54
-      Height = 28
-      Hint = 'Hide Menu'
-      AltFocus = False
-      AltRender = False
-      Caption = ' <<  '
-      Color = 16744448
-      ColorDown = 4227072
-      ColorFrame = clGreen
-      DropDownAlignment = paCenter
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Courier New'
-      Font.Style = []
-      Glossy = True
-      GlossyLevel = 35
-      GlyphPos = gpLeft
-      LightHeight = 27
-      TabOrder = 2
-      TextAlign = taCenter
-      OnClick = bbExpandClick
-    end
     object pgBarread: TProgressBar
       Left = 3
       Top = 466
@@ -530,33 +671,7 @@ object fmoptmenu: Tfmoptmenu
       BackgroundColor = 8404992
       SmoothReverse = True
       Step = 1
-      TabOrder = 3
-    end
-    object bbhideall: TrkGlassButton
-      Left = 59
-      Top = 5
-      Width = 45
-      Height = 28
-      Hint = 'Hide everything.'
-      AltFocus = False
-      AltRender = False
-      Caption = '<<<'
-      Color = 16744448
-      ColorDown = 4227072
-      ColorFrame = clGreen
-      DropDownAlignment = paCenter
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Courier New'
-      Font.Style = []
-      Glossy = True
-      GlossyLevel = 35
-      GlyphPos = gpLeft
-      LightHeight = 27
-      TabOrder = 4
-      TextAlign = taLeft
-      OnClick = bbhideallClick
+      TabOrder = 2
     end
     object pnl6: TPanel
       Left = 55
@@ -567,7 +682,7 @@ object fmoptmenu: Tfmoptmenu
       BevelKind = bkFlat
       Color = clWhite
       Locked = True
-      TabOrder = 5
+      TabOrder = 3
       object img1: TImage
         Left = 2
         Top = 2
@@ -7185,32 +7300,31 @@ object fmoptmenu: Tfmoptmenu
         ExplicitHeight = 52
       end
     end
-    object bbTopbar: TrkGlassButton
-      Left = 106
+    object bbExpand: TButton
+      Left = 3
       Top = 5
       Width = 45
-      Height = 28
+      Height = 30
+      Caption = ' <<  '
+      TabOrder = 4
+      OnClick = bbExpandClick
+    end
+    object bbhideall: TButton
+      Left = 54
+      Top = 5
+      Width = 45
+      Height = 30
+      Caption = '<<<'
+      TabOrder = 5
+      OnClick = bbhideallClick
+    end
+    object bbTopbar: TButton
+      Left = 105
+      Top = 5
+      Width = 45
+      Height = 30
       Hint = 'Hide everything.'
-      AltFocus = False
-      AltRender = False
-      Color = 16744448
-      ColorDown = 4227072
-      ColorFrame = clGreen
-      DropDownAlignment = paCenter
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = []
-      Glossy = True
-      GlossyLevel = 35
-      GlyphPos = gpTop
-      ImageIndex = 13
-      Images = fmLogFolder.il1
-      ImageSpacing = 10
-      LightHeight = 27
       TabOrder = 6
-      TextAlign = taLeft
       OnClick = bbTopbarClick
     end
   end

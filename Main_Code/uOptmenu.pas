@@ -154,28 +154,17 @@ type
     mnuUserRules: TMenuItem;
     Timer1: TTimer;
     pnlMenu: TPanel;
-    bbClearCounters: TrkGlassButton;
-    bbForceread: TrkGlassButton;
-    bbReadfolder: TrkGlassButton;
-    bbReadfromlocation: TrkGlassButton;
-    bbClose: TrkGlassButton;
-    bbMenu: TrkGlassButton;
     pnlInfo: TPanel;
     spbPin: TSpeedButton;
     chkTransparent: TCheckBox;
     sgToCheck: TStringGrid;
-    bbExpand: TrkGlassButton;
     pgBarread: TProgressBar;
-    bbhideall: TrkGlassButton;
     pnlResults: TPanel;
     lbstats: TLabel;
     pnl6: TPanel;
     img1: TImage;
-    bbTopbar: TrkGlassButton;
-    bbFullmenu: TrkGlassButton;
     mnuSaveSummary: TMenuItem;
     savSummary: TSaveDialog;
-    bbSaveSummary: TrkGlassButton;
     ppSaves: TPopupMenu;
     SaveCountsOnly1: TMenuItem;
     SaveDetails1: TMenuItem;
@@ -192,9 +181,20 @@ type
     lbmathop: TOvcRotatedLabel;
     lbrepbyval: TOvcRotatedLabel;
     lbMissval: TOvcRotatedLabel;
-    lbInfo: TOvcRotatedLabel;
     lbnobystate: TOvcRotatedLabel;
     lbnoobsdata: TOvcRotatedLabel;
+    bbMenu: TButton;
+    lbInfo: TOvcRotatedLabel;
+    bbReadfromlocation: TButton;
+    bbClearCounters: TButton;
+    bbForceread: TButton;
+    bbReadfolder: TButton;
+    bbSaveSummary: TButton;
+    bbExpand: TButton;
+    bbhideall: TButton;
+    bbTopbar: TButton;
+    bbClose: TButton;
+    bbFullmenu: TButton;
     procedure bbCloseClick(Sender: TObject);
     procedure bbMenuClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -264,6 +264,7 @@ type
     procedure SaveCountsOnly1Click(Sender: TObject);
     procedure SaveDetails1Click(Sender: TObject);
     procedure mnuCompactViewClick(Sender: TObject);
+    procedure bbSaveSummaryClick(Sender: TObject);
   private
     { Private declarations }
     brdstat        : boolean;
@@ -811,6 +812,11 @@ begin
       MessageDlg('The following exception occurred in:'+#13+#10+'Tfmoptmenu.btnDeliverstudyClick'+#13+#10+e.Message+#13+#10, mtWarning, [mbOK], 0);
     end;
   end;end;
+
+procedure Tfmoptmenu.bbSaveSummaryClick(Sender: TObject);
+begin
+
+end;
 
 //------------------------------------------------------------------------------
 procedure Tfmoptmenu.bbExpandClick(Sender: TObject);
