@@ -3,11 +3,11 @@
         <ProjectGuid>{504CFDAE-B338-432B-A5E7-B4558560D852}</ProjectGuid>
         <MainSource>LogExpress.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
-        <ProjectVersion>18.5</ProjectVersion>
+        <ProjectVersion>18.8</ProjectVersion>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -54,7 +54,6 @@
         <DCC_F>false</DCC_F>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_DcuOutput>C:\My Projects\Delphi\unitsdcu</DCC_DcuOutput>
         <UsePackages>true</UsePackages>
         <Icon_MainIcon>LogExpress_Icon5.ico</Icon_MainIcon>
         <DCC_Hints>false</DCC_Hints>
@@ -69,7 +68,7 @@
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
-        <DCC_ExeOutput>E:\projects\delphi</DCC_ExeOutput>
+        <DCC_ExeOutput>C:\Users\henti\Documents\Embarcadero\Studio\Output</DCC_ExeOutput>
         <VerInfo_Keys>CompanyName=;FileDescription=Reads SAS Log Files checking for problems;FileVersion=4.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=4.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
         <VerInfo_MajorVer>4</VerInfo_MajorVer>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -79,10 +78,10 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_DcuOutput>C:\My Projects\Delphi\unitsdcu</DCC_DcuOutput>
-        <DCC_UnitSearchPath>C:\My Projects\Delphi\customunits\Units;C:\My Projects\Delphi\Components\KleverComponents\GlassButton\;C:\My Projects\Delphi\Components\Orpheus408\Orpheus\source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_DcuOutput>C:\Users\henti\Documents\Embarcadero\Studio\unit_outputs</DCC_DcuOutput>
+        <DCC_UnitSearchPath>C:\Users\henti\Documents\Embarcadero\Studio\customunits;C:\Users\henti\Documents\Embarcadero\Studio\customunits\Units;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_Namespace>Data.Win;Xml.Win;Vcl;Vcl.Imaging;Vcl.Samples;Vcl.Shell;System;Xml;Winapi;System.Win</DCC_Namespace>
-        <DCC_ExeOutput>E:\projects\delphi</DCC_ExeOutput>
+        <DCC_ExeOutput>C:\Users\henti\Documents\Embarcadero\Studio\Output\</DCC_ExeOutput>
         <BRCC_OutputDir>C:\My Projects\projects\delphi\XE10\LogXpress\new\</BRCC_OutputDir>
         <VerInfo_Build>2</VerInfo_Build>
         <BRCC_Verbose>true</BRCC_Verbose>
@@ -91,7 +90,6 @@
         <VerInfo_Keys>CompanyName=;FileVersion=4.0.0.2;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
-        <AppExecutionLevel>requireAdministrator</AppExecutionLevel>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -103,7 +101,7 @@
         <DCC_UnitSearchPath>C:\My Projects\Delphi\customunits\Units;C:\My Projects\Delphi\Components\KleverComponents\GlassButton\;C:\My Projects\Delphi\Components\Orpheus408\Orpheus\source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>C:\My Projects\Delphi\outputs\</DCC_ExeOutput>
         <DCC_DcuOutput>C:\My Projects\Delphi\unitsdcu</DCC_DcuOutput>
-        <Icon_MainIcon>pictures\Wilnichols-Alumin-Folders-Burn-Black-Folder.ico</Icon_MainIcon>
+        <Icon_MainIcon>LogExpress_Icon1.ico</Icon_MainIcon>
         <VerInfo_MajorVer>4</VerInfo_MajorVer>
         <Debugger_RunParams> -      kkk k k k k batch &quot;C:\TEMP\log_Test\folder1\&quot;</Debugger_RunParams>
         <VerInfo_Locale>1033</VerInfo_Locale>

@@ -569,7 +569,8 @@ begin
             ascrdt := DelESpace(copy(delbspace(tmline), 1, pos(' ', delbspace(tmline))+1));
             ascrtm := DelESpace(copy(delbspace(ascrdt), pos(':', delbspace(ascrdt))+1));
             ascrdt := Copy(ascrdt, 1, pos(':', ascrdt)-1);
-            rcComps[ifilecnt].fn1crdt   := sasdttm2dt(ascrdt, ascrtm); //Get the Created date
+            //*TODO: This needs relooking     rcComps[ifilecnt].fn1crdt   := sasdttm2dt(ascrdt);//, ascrtm);
+            rcComps[ifilecnt].fn1crdt   := sasdttm2dt(ascrdt);//, ascrtm); //Get the Created date
             tmline                      := copy(delbspace(tmline), pos(' ', delbspace(tmline))+1, Length(tmLine) ); //Get the Created date
 
             ascrdt := DelESpace(copy(delbspace(tmline), 1, pos(' ', delbspace(tmline))+1));
@@ -591,12 +592,14 @@ begin
             ascrdt := DelESpace(copy(delbspace(tmline), 1, pos(' ', delbspace(tmline))+1));
             ascrtm := DelESpace(copy(delbspace(ascrdt), pos(':', delbspace(ascrdt))+1));
             ascrdt := Copy(ascrdt, 1, pos(':', ascrdt)-1);
-            rcComps[ifilecnt].fn2crdt   := sasdttm2dt(ascrdt, ascrtm); //Get the Created date
+            //TODO: Needs fixing rcComps[ifilecnt].fn2crdt   := sasdttm2dt(ascrdt, ascrtm);
+            rcComps[ifilecnt].fn2crdt   := sasdttm2dt(ascrdt);//, ascrtm); //Get the Created date
             tmline                      := copy(delbspace(tmline), pos(' ', delbspace(tmline))+1, Length(tmLine) ); //Get the Created date
             ascrdt := DelESpace(copy(delbspace(tmline), 1, pos(' ', delbspace(tmline))+1));
             ascrtm := DelESpace(copy(delbspace(ascrdt), pos(':', delbspace(ascrdt))+1));
             ascrdt := Copy(ascrdt, 1, pos(':', ascrdt)-1);
-            rcComps[ifilecnt].fn2moddt  := sasdttm2dt(ascrdt, ascrtm);;    //Get the next section
+            //TODO: This needs fixing rcComps[ifilecnt].fn2moddt  := sasdttm2dt(ascrdt, ascrtm);
+            rcComps[ifilecnt].fn2moddt  := sasdttm2dt(ascrdt);//, ascrtm);    //Get the next section
             tmline                      := copy(delbspace(tmline), pos(' ', delbspace(tmline))+1, Length(tmLine) ); //Get the modified date
             rcComps[ifilecnt].fn2vcnt   := StrToInt(DelRSpace(copy(delbspace(tmline), 1, pos(' ', delbspace(tmline))+1)));    //Get the next section
             tmline                      := delbspace(copy(delbspace(tmline), pos(' ', delbspace(tmline))+1, Length(tmLine) )); //Get the nvar date

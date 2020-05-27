@@ -594,7 +594,7 @@ object fmLogFolder: TfmLogFolder
           Top = 1
           Width = 934
           Height = 498
-          ActivePage = tsReadSelective
+          ActivePage = tsDetail
           Align = alClient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -606,10 +606,6 @@ object fmLogFolder: TfmLogFolder
           OnChange = pgReadFilesChange
           object tsReadall: TTabSheet
             Caption = 'Files Read from Locations'
-            ExplicitLeft = 0
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object grpFiles: TGroupBox
               Left = 0
               Top = 0
@@ -753,10 +749,6 @@ object fmLogFolder: TfmLogFolder
             Font.Style = []
             ImageIndex = 2
             ParentFont = False
-            ExplicitLeft = 0
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object pgcpgresults: TPageControl
               Left = 296
               Top = 80
@@ -767,10 +759,6 @@ object fmLogFolder: TfmLogFolder
               TabOrder = 0
               object tsDetails: TTabSheet
                 Caption = '             Details              '
-                ExplicitLeft = 0
-                ExplicitTop = 0
-                ExplicitWidth = 0
-                ExplicitHeight = 0
               end
               object tsSummary: TTabSheet
                 Caption = 'Summary'

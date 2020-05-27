@@ -1,60 +1,36 @@
-﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-		<PropertyGroup>
-			<ProjectGuid>{BE1EACC5-4C1F-4296-9EB7-37449093E7AD}</ProjectGuid>
-		</PropertyGroup>
-		<ItemGroup>
-			<Projects Include="LogExpress.dproj">
-				<Dependencies/>
-			</Projects>
-			<Projects Include="LogAnalyzer.dproj">
-				<Dependencies/>
-			</Projects>
-			<Projects Include="..\macro_debug\LogAnalyzer2.dproj">
-				<Dependencies/>
-			</Projects>
-		</ItemGroup>
-		<ProjectExtensions>
-			<Borland.Personality>Default.Personality.12</Borland.Personality>
-			<Borland.ProjectType/>
-			<BorlandProject>
-				<Default.Personality/>
-			</BorlandProject>
-		</ProjectExtensions>
-		<Target Name="LogExpress">
-			<MSBuild Projects="LogExpress.dproj"/>
-		</Target>
-		<Target Name="LogExpress:Clean">
-			<MSBuild Projects="LogExpress.dproj" Targets="Clean"/>
-		</Target>
-		<Target Name="LogExpress:Make">
-			<MSBuild Projects="LogExpress.dproj" Targets="Make"/>
-		</Target>
-		<Target Name="LogAnalyzer">
-			<MSBuild Projects="LogAnalyzer.dproj"/>
-		</Target>
-		<Target Name="LogAnalyzer:Clean">
-			<MSBuild Projects="LogAnalyzer.dproj" Targets="Clean"/>
-		</Target>
-		<Target Name="LogAnalyzer:Make">
-			<MSBuild Projects="LogAnalyzer.dproj" Targets="Make"/>
-		</Target>
-		<Target Name="LogAnalyzer2">
-			<MSBuild Projects="..\macro_debug\LogAnalyzer2.dproj"/>
-		</Target>
-		<Target Name="LogAnalyzer2:Clean">
-			<MSBuild Projects="..\macro_debug\LogAnalyzer2.dproj" Targets="Clean"/>
-		</Target>
-		<Target Name="LogAnalyzer2:Make">
-			<MSBuild Projects="..\macro_debug\LogAnalyzer2.dproj" Targets="Make"/>
-		</Target>
-		<Target Name="Build">
-			<CallTarget Targets="LogExpress;LogAnalyzer;LogAnalyzer2"/>
-		</Target>
-		<Target Name="Clean">
-			<CallTarget Targets="LogExpress:Clean;LogAnalyzer:Clean;LogAnalyzer2:Clean"/>
-		</Target>
-		<Target Name="Make">
-			<CallTarget Targets="LogExpress:Make;LogAnalyzer:Make;LogAnalyzer2:Make"/>
-		</Target>
-		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
-	</Project>
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BE1EACC5-4C1F-4296-9EB7-37449093E7AD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="LogExpress.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LogExpress">
+        <MSBuild Projects="LogExpress.dproj"/>
+    </Target>
+    <Target Name="LogExpress:Clean">
+        <MSBuild Projects="LogExpress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogExpress:Make">
+        <MSBuild Projects="LogExpress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LogExpress"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LogExpress:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LogExpress:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
