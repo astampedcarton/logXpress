@@ -78,7 +78,7 @@ begin
     ssParam   := Paramstr(1);
     ssParVal  := Paramstr(2);
 //    ssParam := '-batch';
-  TStyleManager.TrySetStyle('TabletDark');
+  TStyleManager.TrySetStyle('Onyx Blue');
   Application.Title := 'Log Express - BETA Testing';
 
     if lowercase(ssParam) = '-batch' then begin

@@ -157,13 +157,11 @@ object fmLogFolder: TfmLogFolder
           Height = 17
           Align = alTop
           AutoSize = False
-          Color = clWindow
           Font.Charset = ANSI_CHARSET
           Font.Color = clNavy
           Font.Height = -12
           Font.Name = 'Calibri'
           Font.Style = []
-          ParentColor = False
           ParentFont = False
           Transparent = False
           ExplicitLeft = -2
@@ -181,15 +179,15 @@ object fmLogFolder: TfmLogFolder
           Color = clWindow
           Font.Charset = ANSI_CHARSET
           Font.Color = clNavy
-          Font.Height = -12
-          Font.Name = 'Calibri'
+          Font.Height = -11
+          Font.Name = 'Courier New'
           Font.Pitch = fpFixed
           Font.Style = []
           Font.Quality = fqClearType
           GlowSize = 5
           ParentColor = False
           ParentFont = False
-          Transparent = False
+          Transparent = True
           OnClick = lbFilesReadClick
           ExplicitLeft = 4
           ExplicitTop = 410
@@ -205,15 +203,15 @@ object fmLogFolder: TfmLogFolder
           Color = clWindow
           Font.Charset = ANSI_CHARSET
           Font.Color = clNavy
-          Font.Height = -12
-          Font.Name = 'Calibri'
+          Font.Height = -11
+          Font.Name = 'Courier New'
           Font.Pitch = fpFixed
           Font.Style = []
           Font.Quality = fqClearType
           GlowSize = 5
           ParentColor = False
           ParentFont = False
-          Transparent = False
+          Transparent = True
           ExplicitLeft = 4
           ExplicitTop = 424
         end
@@ -227,14 +225,14 @@ object fmLogFolder: TfmLogFolder
           Caption = 'No Filtering'
           Font.Charset = ANSI_CHARSET
           Font.Color = clNavy
-          Font.Height = -12
-          Font.Name = 'Calibri'
+          Font.Height = -11
+          Font.Name = 'Courier New'
           Font.Pitch = fpFixed
           Font.Style = []
           Font.Quality = fqClearType
           GlowSize = 5
           ParentFont = False
-          Transparent = False
+          Transparent = True
           ExplicitLeft = 4
           ExplicitTop = 455
         end
@@ -250,8 +248,6 @@ object fmLogFolder: TfmLogFolder
           Font.Height = -12
           Font.Name = 'Calibri'
           Font.Style = []
-          ParentBackground = False
-          ParentColor = False
           ParentFont = False
           TabOrder = 0
           object lbNotes: TLabel
@@ -261,16 +257,17 @@ object fmLogFolder: TfmLogFolder
             Height = 14
             AutoSize = False
             Caption = 'Notes'
-            Color = cl3DLight
+            Color = clWindow
             Font.Charset = ANSI_CHARSET
             Font.Color = clMaroon
             Font.Height = -11
-            Font.Name = 'Calibri'
+            Font.Name = 'Courier New'
+            Font.Pitch = fpFixed
             Font.Style = []
             Font.Quality = fqClearType
             ParentColor = False
             ParentFont = False
-            Transparent = False
+            Transparent = True
           end
           object lbInfo: TLabel
             Left = 4
@@ -279,16 +276,17 @@ object fmLogFolder: TfmLogFolder
             Height = 14
             AutoSize = False
             Caption = 'Notes'
-            Color = cl3DLight
+            Color = clWindow
             Font.Charset = ANSI_CHARSET
             Font.Color = clMaroon
             Font.Height = -11
-            Font.Name = 'Calibri'
+            Font.Name = 'Courier New'
+            Font.Pitch = fpFixed
             Font.Style = []
             Font.Quality = fqClearType
             ParentColor = False
             ParentFont = False
-            Transparent = False
+            Transparent = True
           end
         end
         object grp5: TGroupBox
@@ -763,10 +761,6 @@ object fmLogFolder: TfmLogFolder
               object tsSummary: TTabSheet
                 Caption = 'Summary'
                 ImageIndex = 1
-                ExplicitLeft = 0
-                ExplicitTop = 0
-                ExplicitWidth = 0
-                ExplicitHeight = 0
               end
             end
             object tvView: TTreeView
@@ -1941,10 +1935,11 @@ object fmLogFolder: TfmLogFolder
     Left = 488
     Top = 464
   end
-  object dlgOpendir: TOpenDialog
-    Options = [ofHideReadOnly, ofNoValidate, ofPathMustExist, ofNoNetworkButton, ofOldStyleDialog, ofEnableSizing, ofDontAddToRecent]
-    OptionsEx = [ofExNoPlacesBar]
-    Left = 584
-    Top = 128
+  object dlgOpendir: TFileOpenDialog
+    FavoriteLinks = <>
+    FileTypes = <>
+    Options = [fdoPickFolders]
+    Left = 984
+    Top = 320
   end
 end

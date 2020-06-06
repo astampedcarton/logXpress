@@ -52,7 +52,6 @@ object fmoptmenu: Tfmoptmenu
     TabOrder = 0
     OnDblClick = pnlMenuDblClick
     OnMouseDown = pnlMenuMouseDown
-    ExplicitTop = -5
     object pnlResults: TPanel
       Left = 0
       Top = 0
@@ -345,7 +344,6 @@ object fmoptmenu: Tfmoptmenu
         Caption = '^'
         TabOrder = 0
         OnClick = bbFullmenuClick
-        ExplicitWidth = 17
       end
     end
     object bbMenu: TButton
@@ -494,7 +492,6 @@ object fmoptmenu: Tfmoptmenu
     TabOrder = 1
     OnDblClick = pnlInfoDblClick
     OnMouseDown = pnlMenuMouseDown
-    ExplicitTop = 5
     object spbPin: TSpeedButton
       Left = 159
       Top = 5

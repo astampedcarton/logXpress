@@ -98,6 +98,12 @@
                Removed the Jedi Components
   25MAR2017 - [D1] Fixed a memory leak.
               [D2] Added Monitor Files.
+  22MAy2020 - Started conversion to Delphi XE 10.3
+              Replaced the Speedbuttons on the main menu with normal buttons.
+              Added a new Style
+              On LogFolder Fixed a bug that was sending the form in to an endless loop
+              Fixed the irritating bug on the LogFolder where certain labels stayed hidden.
+              [D3] Replaced the TopenDialog with the newer TfileOpendialog.
 
 Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win
                     }
