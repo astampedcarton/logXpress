@@ -126,7 +126,8 @@ type
     cbDirection: TComboBox;
     Label7: TLabel;
     ckEnableFilter: TCheckBox;
-    dlgOpendir: TFileOpenDialog; // [D3]
+    dlgOpendir: TFileOpenDialog;
+    bbApply: TButton; // [D3]
     procedure bbRunClick(Sender: TObject);
     procedure bbStopClick(Sender: TObject);
     procedure ckfilelistClick(Sender: TObject);
@@ -267,6 +268,8 @@ type
     procedure bbSavetooClick(Sender: TObject);
     procedure spbPinClick(Sender: TObject);
     procedure ckEnableFilterClick(Sender: TObject);
+    procedure bbApplyClick(Sender: TObject);
+    procedure imgMenuClick(Sender: TObject);
   private
     { Private declarations }
     arFdets: array of tFdetails;
@@ -474,7 +477,7 @@ begin
       dlgOpendir.DefaultFolder  := sgLocations.Cells[0, idx];
     end;
 
-     if dlgOpendir.Execute then
+    if dlgOpendir.Execute then
     begin
       // Find the first open Row and insert the directory there;
       icnt := 0;
@@ -549,6 +552,22 @@ procedure TfmLogFolder.bbAddrowMouseMove(Sender: TObject; Shift: TShiftState;
   X, Y: Integer);
 begin
   splViewMouseEnter(nil);
+end;
+
+procedure TfmLogFolder.bbApplyClick(Sender: TObject);
+var
+  ilst : integer;
+begin
+
+  ilst := ckReadselect.Items.Count;
+
+  //Extact the file name and the date and save it.
+  //If the file name matches the Mask then keep it.
+  //If the file date meets the criteria of the date keep it.
+  //Discard for all other cases.
+
+
+  //ckReadselect
 end;
 
 // ------------------------------------------------------------------------------
@@ -1906,6 +1925,17 @@ begin
   end;
 end;
 
+procedure TfmLogFolder.imgMenuClick(Sender: TObject);
+begin
+  if splView.Opened = true then begin
+    splView.Opened := false;
+  end else begin
+    splView.Opened := true;
+    splView.OpenedWidth := 250;
+  End;
+
+end;
+// ------------------------------------------------------------------------------
 procedure TfmLogFolder.Label3Click(Sender: TObject);
 begin
 
@@ -3060,14 +3090,14 @@ end;
 // ------------------------------------------------------------------------------
 procedure TfmLogFolder.splViewMouseEnter(Sender: TObject);
 begin
-  splView.Opened := true;
-  splView.OpenedWidth := 250;
+//  splView.Opened := true;
+//  splView.OpenedWidth := 250;
 end;
 
 // ------------------------------------------------------------------------------
 procedure TfmLogFolder.splViewMouseLeave(Sender: TObject);
 begin
-  splView.Opened := False;
+//  splView.Opened := False;
 end;
 
 procedure TfmLogFolder.splViewMouseMove(Sender: TObject; Shift: TShiftState;
@@ -3729,6 +3759,7 @@ begin
     fmLogFolder.FormStyle := fsNormal; { B 41] }
     fmLogFolder.SendToBack;
     dlgOpenrdlst.Execute;
+
 
     sval := '-1';
     if isnotempty(dlgOpenrdlst.FileName) then

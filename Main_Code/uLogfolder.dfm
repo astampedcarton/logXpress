@@ -592,7 +592,7 @@ object fmLogFolder: TfmLogFolder
           Top = 1
           Width = 934
           Height = 498
-          ActivePage = tsDetail
+          ActivePage = tsReadSelective
           Align = alClient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -796,8 +796,8 @@ object fmLogFolder: TfmLogFolder
       end
     end
     object splView: TSplitView
-      Left = 0
-      Top = -4
+      Left = 1
+      Top = 1
       Width = 40
       Height = 718
       AnimationDelay = 5
@@ -806,8 +806,7 @@ object fmLogFolder: TfmLogFolder
       CloseStyle = svcCompact
       Color = clHighlight
       CompactWidth = 40
-      DisplayMode = svmOverlay
-      FullRepaint = False
+      DockSite = True
       Opened = False
       OpenedWidth = 260
       Padding.Left = 5
@@ -818,6 +817,8 @@ object fmLogFolder: TfmLogFolder
       OnMouseEnter = splViewMouseEnter
       OnMouseLeave = splViewMouseLeave
       OnMouseMove = splViewMouseMove
+      ExplicitLeft = 0
+      ExplicitTop = -2
       object imgMenu: TImage
         Left = 5
         Top = 10
@@ -836,13 +837,14 @@ object fmLogFolder: TfmLogFolder
           370000000049454E44AE426082}
         Proportional = True
         Stretch = True
+        OnClick = imgMenuClick
         OnMouseMove = bbMNUMouseMove
       end
       object bbRun: TButton
-        Left = 60
-        Top = 194
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 159
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Read'
         Font.Charset = ANSI_CHARSET
@@ -857,10 +859,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbRunMouseMove
       end
       object bbStop: TButton
-        Left = 60
-        Top = 237
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 195
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Stop'
         Font.Charset = ANSI_CHARSET
@@ -875,10 +877,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbStopMouseMove
       end
       object bbShowall: TButton
-        Left = 60
-        Top = 280
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 231
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Show All'
         Font.Charset = ANSI_CHARSET
@@ -893,10 +895,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbShowallMouseMove
       end
       object bbSave: TButton
-        Left = 60
-        Top = 323
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 267
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Save Results'
         Font.Charset = ANSI_CHARSET
@@ -911,10 +913,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbSaveMouseMove
       end
       object ckDisplay: TCheckBox
-        Left = 49
-        Top = 640
-        Width = 185
-        Height = 17
+        Left = 55
+        Top = 438
+        Width = 120
+        Height = 28
         Caption = 'Display File Names only'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWhite
@@ -924,14 +926,15 @@ object fmLogFolder: TfmLogFolder
         ParentFont = False
         TabOrder = 4
         Visible = False
+        WordWrap = True
         OnClick = ckDisplayClick
         OnMouseMove = ckDisplayMouseMove
       end
       object ckBuilddetailafterread: TCheckBox
-        Left = 49
-        Top = 663
-        Width = 205
-        Height = 17
+        Left = 53
+        Top = 472
+        Width = 120
+        Height = 34
         Caption = 'Build Log Result Tree after Reading'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWhite
@@ -941,13 +944,14 @@ object fmLogFolder: TfmLogFolder
         ParentFont = False
         TabOrder = 5
         Visible = False
+        WordWrap = True
         OnMouseMove = ckBuilddetailafterreadMouseMove
       end
       object bbReset: TButton
-        Left = 60
+        Left = 55
         Top = 7
-        Width = 140
-        Height = 40
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Reset'
         Font.Charset = ANSI_CHARSET
@@ -962,10 +966,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbResetMouseMove
       end
       object bbAddrow: TButton
-        Left = 60
-        Top = 50
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 43
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Insert Row'
         Font.Charset = ANSI_CHARSET
@@ -980,10 +984,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbAddrowMouseMove
       end
       object bbClearRow: TButton
-        Left = 60
-        Top = 93
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 79
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Clear Row'
         Font.Charset = ANSI_CHARSET
@@ -998,10 +1002,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbClearRowMouseMove
       end
       object bbAddDir: TButton
-        Left = 60
-        Top = 136
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 115
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Add Directory'
         Font.Charset = ANSI_CHARSET
@@ -1016,10 +1020,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbAddDirMouseMove
       end
       object bbClose: TButton
-        Left = 60
-        Top = 482
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 393
+        Width = 120
+        Height = 30
         ParentCustomHint = False
         Caption = 'Close'
         Font.Charset = ANSI_CHARSET
@@ -1034,28 +1038,28 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbCloseMouseMove
       end
       object Panel2: TPanel
-        Left = 50
-        Top = 184
-        Width = 160
+        Left = 55
+        Top = 151
+        Width = 120
         Height = 2
         TabOrder = 11
         StyleElements = [seFont]
         OnMouseMove = Panel2MouseMove
       end
       object Panel6: TPanel
-        Left = 50
-        Top = 528
-        Width = 160
+        Left = 55
+        Top = 430
+        Width = 120
         Height = 2
         TabOrder = 12
         StyleElements = [seFont]
         OnMouseMove = Panel6MouseMove
       end
       object bbRefresh: TButton
-        Left = 60
-        Top = 426
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 349
+        Width = 120
+        Height = 30
         Hint = 'Click to Build a List based on the file paths'
         ParentCustomHint = False
         Caption = 'Refresh List'
@@ -1071,10 +1075,10 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbRefreshMouseMove
       end
       object bbBuild: TButton
-        Left = 60
-        Top = 383
-        Width = 140
-        Height = 40
+        Left = 55
+        Top = 313
+        Width = 120
+        Height = 30
         Hint = 'Click to Build a List based on the file paths'
         ParentCustomHint = False
         Caption = 'Build List'
@@ -1090,18 +1094,18 @@ object fmLogFolder: TfmLogFolder
         OnMouseMove = bbBuildMouseMove
       end
       object Panel7: TPanel
-        Left = 50
-        Top = 372
-        Width = 160
+        Left = 55
+        Top = 305
+        Width = 120
         Height = 2
         TabOrder = 15
         StyleElements = [seFont]
         OnMouseMove = Panel6MouseMove
       end
       object Panel8: TPanel
-        Left = 50
-        Top = 474
-        Width = 160
+        Left = 55
+        Top = 385
+        Width = 120
         Height = 2
         TabOrder = 16
         StyleElements = [seFont]
@@ -1168,8 +1172,8 @@ object fmLogFolder: TfmLogFolder
     end
   end
   object gpFilter: TGroupBox
-    Left = 983
-    Top = 17
+    Left = 984
+    Top = 13
     Width = 182
     Height = 180
     Caption = 'Folder Filtering'
@@ -1221,9 +1225,9 @@ object fmLogFolder: TfmLogFolder
     end
     object edFileMask: TEdit
       Left = 7
-      Top = 66
+      Top = 60
       Width = 166
-      Height = 23
+      Height = 21
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -1285,6 +1289,21 @@ object fmLogFolder: TfmLogFolder
       State = cbChecked
       TabOrder = 3
       OnClick = ckEnableFilterClick
+    end
+    object bbApply: TButton
+      Left = 90
+      Top = 142
+      Width = 80
+      Height = 27
+      Caption = 'Apply'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      OnClick = bbApplyClick
     end
   end
   object Timer1: TTimer
@@ -1938,7 +1957,7 @@ object fmLogFolder: TfmLogFolder
   object dlgOpendir: TFileOpenDialog
     FavoriteLinks = <>
     FileTypes = <>
-    Options = [fdoPickFolders]
+    Options = [fdoPathMustExist]
     Left = 984
     Top = 320
   end
