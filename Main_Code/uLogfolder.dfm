@@ -604,6 +604,10 @@ object fmLogFolder: TfmLogFolder
           OnChange = pgReadFilesChange
           object tsReadall: TTabSheet
             Caption = 'Files Read from Locations'
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object grpFiles: TGroupBox
               Left = 0
               Top = 0
@@ -747,6 +751,10 @@ object fmLogFolder: TfmLogFolder
             Font.Style = []
             ImageIndex = 2
             ParentFont = False
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object pgcpgresults: TPageControl
               Left = 296
               Top = 80
@@ -757,10 +765,18 @@ object fmLogFolder: TfmLogFolder
               TabOrder = 0
               object tsDetails: TTabSheet
                 Caption = '             Details              '
+                ExplicitLeft = 0
+                ExplicitTop = 0
+                ExplicitWidth = 0
+                ExplicitHeight = 0
               end
               object tsSummary: TTabSheet
                 Caption = 'Summary'
                 ImageIndex = 1
+                ExplicitLeft = 0
+                ExplicitTop = 0
+                ExplicitWidth = 0
+                ExplicitHeight = 0
               end
             end
             object tvView: TTreeView
@@ -817,8 +833,6 @@ object fmLogFolder: TfmLogFolder
       OnMouseEnter = splViewMouseEnter
       OnMouseLeave = splViewMouseLeave
       OnMouseMove = splViewMouseMove
-      ExplicitLeft = 0
-      ExplicitTop = -2
       object imgMenu: TImage
         Left = 5
         Top = 10
@@ -1227,7 +1241,7 @@ object fmLogFolder: TfmLogFolder
       Left = 7
       Top = 60
       Width = 166
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
