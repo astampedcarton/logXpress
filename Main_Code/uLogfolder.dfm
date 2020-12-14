@@ -152,7 +152,7 @@ object fmLogFolder: TfmLogFolder
         TabOrder = 0
         object lbstats: TLabel
           Left = 2
-          Top = 444
+          Top = 445
           Width = 173
           Height = 17
           Align = alTop
@@ -169,7 +169,7 @@ object fmLogFolder: TfmLogFolder
         end
         object lbFilesRead: TLabel
           Left = 2
-          Top = 402
+          Top = 403
           Width = 173
           Height = 14
           Hint = 'Nr of Files Read'
@@ -188,13 +188,12 @@ object fmLogFolder: TfmLogFolder
           ParentColor = False
           ParentFont = False
           Transparent = True
-          OnClick = lbFilesReadClick
           ExplicitLeft = 4
           ExplicitTop = 410
         end
         object lbFilesel: TLabel
           Left = 2
-          Top = 416
+          Top = 417
           Width = 173
           Height = 14
           Align = alTop
@@ -217,7 +216,7 @@ object fmLogFolder: TfmLogFolder
         end
         object lbFilters: TLabel
           Left = 2
-          Top = 430
+          Top = 431
           Width = 173
           Height = 14
           Align = alTop
@@ -238,7 +237,7 @@ object fmLogFolder: TfmLogFolder
         end
         object grp4: TGroupBox
           Left = 2
-          Top = 17
+          Top = 18
           Width = 173
           Height = 53
           Align = alTop
@@ -291,7 +290,7 @@ object fmLogFolder: TfmLogFolder
         end
         object grp5: TGroupBox
           Left = 2
-          Top = 70
+          Top = 71
           Width = 173
           Height = 332
           Align = alTop
@@ -305,222 +304,6 @@ object fmLogFolder: TfmLogFolder
           ParentColor = False
           ParentFont = False
           TabOrder = 1
-          DesignSize = (
-            173
-            332)
-          object lbUninit: TLabel
-            Left = 3
-            Top = 36
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbUninitClick
-            ExplicitTop = 23
-            ExplicitWidth = 170
-          end
-          object lbConv: TLabel
-            Left = 3
-            Top = 62
-            Width = 167
-            Height = 15
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            Transparent = False
-            OnClick = lbConvClick
-            ExplicitTop = 40
-            ExplicitWidth = 170
-          end
-          object lbMerge: TLabel
-            Left = 3
-            Top = 86
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbMergeClick
-            ExplicitTop = 57
-            ExplicitWidth = 170
-          end
-          object lbDivs: TLabel
-            Left = 3
-            Top = 110
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbDivsClick
-            ExplicitTop = 74
-            ExplicitWidth = 170
-          end
-          object lbwarn: TLabel
-            Left = 3
-            Top = 137
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbwarnClick
-            ExplicitTop = 92
-            ExplicitWidth = 170
-          end
-          object lbInvald: TLabel
-            Left = 3
-            Top = 162
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbInvaldClick
-            ExplicitTop = 110
-            ExplicitWidth = 170
-          end
-          object lberr: TLabel
-            Left = 3
-            Top = 188
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lberrClick
-            ExplicitTop = 127
-            ExplicitWidth = 170
-          end
-          object lbCust: TLabel
-            Left = 3
-            Top = 212
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'Notes'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbCustClick
-            ExplicitTop = 144
-            ExplicitWidth = 170
-          end
-          object lbAlloth: TLabel
-            Left = 3
-            Top = 239
-            Width = 167
-            Height = 15
-            Hint = 'Click to view additional information.'
-            Anchors = [akLeft, akRight]
-            AutoSize = False
-            Caption = 'All Other'
-            Color = clWhite
-            Font.Charset = ANSI_CHARSET
-            Font.Color = clMaroon
-            Font.Height = -11
-            Font.Name = 'Courier New'
-            Font.Style = []
-            ParentColor = False
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            Transparent = False
-            OnClick = lbAllothClick
-            ExplicitTop = 162
-            ExplicitWidth = 170
-          end
           object sgToCheck: TStringGrid
             Left = 2
             Top = 16
@@ -543,6 +326,8 @@ object fmLogFolder: TfmLogFolder
             OnDrawCell = sgToCheckDrawCell
             OnKeyUp = sgToCheckKeyUp
             OnSelectCell = sgToCheckSelectCell
+            ExplicitLeft = 6
+            ExplicitTop = 71
             ColWidths = (
               64
               64)
@@ -556,7 +341,7 @@ object fmLogFolder: TfmLogFolder
         end
         object pgRead: TProgressBar
           Left = 2
-          Top = 461
+          Top = 462
           Width = 173
           Height = 17
           Align = alTop
@@ -592,7 +377,7 @@ object fmLogFolder: TfmLogFolder
           Top = 1
           Width = 934
           Height = 498
-          ActivePage = tsReadSelective
+          ActivePage = tsReadall
           Align = alClient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -604,10 +389,6 @@ object fmLogFolder: TfmLogFolder
           OnChange = pgReadFilesChange
           object tsReadall: TTabSheet
             Caption = 'Files Read from Locations'
-            ExplicitLeft = 0
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object grpFiles: TGroupBox
               Left = 0
               Top = 0
@@ -649,6 +430,8 @@ object fmLogFolder: TfmLogFolder
                 TabOrder = 0
                 OnClick = ckfilelistClick
                 OnDrawItem = ckfilelistDrawItem
+                ExplicitLeft = -198
+                ExplicitTop = 41
               end
             end
           end
@@ -693,7 +476,6 @@ object fmLogFolder: TfmLogFolder
                 Font.Height = -12
                 Font.Name = 'Arial Unicode MS'
                 Font.Style = []
-                ItemHeight = 15
                 ParentFont = False
                 ParentShowHint = False
                 ScrollWidth = 10
@@ -715,8 +497,8 @@ object fmLogFolder: TfmLogFolder
               object Label1: TLabel
                 Left = 3
                 Top = 3
-                Width = 343
-                Height = 14
+                Width = 339
+                Height = 15
                 Caption = 
                   'Select from the list below what you want to read and then Click ' +
                   'Read...'
@@ -730,8 +512,8 @@ object fmLogFolder: TfmLogFolder
               object Label2: TLabel
                 Left = 3
                 Top = 18
-                Width = 235
-                Height = 14
+                Width = 240
+                Height = 15
                 Caption = 'Right Click to Load a Read list or Save a Read list'
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clNavy
@@ -751,10 +533,6 @@ object fmLogFolder: TfmLogFolder
             Font.Style = []
             ImageIndex = 2
             ParentFont = False
-            ExplicitLeft = 0
-            ExplicitTop = 0
-            ExplicitWidth = 0
-            ExplicitHeight = 0
             object pgcpgresults: TPageControl
               Left = 296
               Top = 80
@@ -765,18 +543,10 @@ object fmLogFolder: TfmLogFolder
               TabOrder = 0
               object tsDetails: TTabSheet
                 Caption = '             Details              '
-                ExplicitLeft = 0
-                ExplicitTop = 0
-                ExplicitWidth = 0
-                ExplicitHeight = 0
               end
               object tsSummary: TTabSheet
                 Caption = 'Summary'
                 ImageIndex = 1
-                ExplicitLeft = 0
-                ExplicitTop = 0
-                ExplicitWidth = 0
-                ExplicitHeight = 0
               end
             end
             object tvView: TTreeView
@@ -1324,10 +1094,12 @@ object fmLogFolder: TfmLogFolder
     Enabled = False
     Interval = 2000
     OnTimer = Timer1Timer
-    Left = 960
+    Left = 632
+    Top = 64
   end
   object PopupMenu1: TPopupMenu
-    Left = 1120
+    Left = 672
+    Top = 64
     object ExpandAll1: TMenuItem
       Caption = 'Expand All'
       OnClick = ExpandAll1Click
@@ -1346,7 +1118,7 @@ object fmLogFolder: TfmLogFolder
   end
   object ppChkedit: TPopupMenu
     Left = 376
-    Top = 16
+    Top = 24
     object OpenReadlist1: TMenuItem
       Caption = 'Open Read list'
       OnClick = OpenReadlist1Click
@@ -1370,8 +1142,10 @@ object fmLogFolder: TfmLogFolder
   object dlgOpenrdlst: TOpenDialog
     OnClose = dlgOpenrdlstClose
     Filter = '*.rdlt'
+    Options = [ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Title = 'Open Read List'
-    Left = 912
+    Left = 464
+    Top = 80
   end
   object dlgSaverdlst: TSaveDialog
     DefaultExt = 'rdlt'
@@ -1394,8 +1168,8 @@ object fmLogFolder: TfmLogFolder
     Top = 64
   end
   object il1: TImageList
-    Left = 352
-    Top = 16
+    Left = 328
+    Top = 24
     Bitmap = {
       494C01010E001200040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
@@ -1945,8 +1719,8 @@ object fmLogFolder: TfmLogFolder
     end
   end
   object ppGrid: TPopupMenu
-    Left = 776
-    Top = 88
+    Left = 512
+    Top = 128
     object mnuReset: TMenuItem
       Caption = 'Reset'
       OnClick = mnuResetClick
@@ -1972,7 +1746,7 @@ object fmLogFolder: TfmLogFolder
     FavoriteLinks = <>
     FileTypes = <>
     Options = [fdoPathMustExist]
-    Left = 984
-    Top = 320
+    Left = 464
+    Top = 128
   end
 end

@@ -3,7 +3,7 @@
         <ProjectGuid>{504CFDAE-B338-432B-A5E7-B4558560D852}</ProjectGuid>
         <MainSource>LogExpress.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

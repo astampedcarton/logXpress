@@ -104,7 +104,12 @@
               On LogFolder Fixed a bug that was sending the form in to an endless loop
               Fixed the irritating bug on the LogFolder where certain labels stayed hidden.
               [D3] Replaced the TopenDialog with the newer TfileOpendialog.
-
+  14DEC2020 - [D4] Fixed a bug where when you select files to read but opt to move to reading all files
+                   it shows that you have selected files during the reading process.
+              [D5] Fixed the problem where when reading multiple folders and one does not contain any logs
+                   logx read the last values.
+              [D6] uLogFolder: Removed the hidden labels that was causing access violation when the grid was
+                   dblclicked twice.
 Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win
                     }
 unit uOptmenu;
@@ -821,7 +826,7 @@ begin
 
 procedure Tfmoptmenu.bbSaveSummaryClick(Sender: TObject);
 begin
-
+  SaveCountsOnly1Click(sender);
 end;
 
 //------------------------------------------------------------------------------

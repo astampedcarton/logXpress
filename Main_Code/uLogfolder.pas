@@ -57,15 +57,6 @@ type
     lbNotes: TLabel;
     lbInfo: TLabel;
     grp5: TGroupBox;
-    lbUninit: TLabel;
-    lbConv: TLabel;
-    lbMerge: TLabel;
-    lbDivs: TLabel;
-    lbwarn: TLabel;
-    lbInvald: TLabel;
-    lberr: TLabel;
-    lbCust: TLabel;
-    lbAlloth: TLabel;
     sgToCheck: TStringGrid;
     pgRead: TProgressBar;
     grp1: TGroupBox;
@@ -766,6 +757,9 @@ begin
     Timer1.Enabled := False;
     if pgReadFiles.ActivePage = tsReadall then
     begin
+      lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);   //[D4]
+      lbFilesel.Caption := 'Files selected  : ';
+
       ReadLogFolder('', etReadall);
       bbShowall.Enabled := true;
       Setlabelcolors;
@@ -958,6 +952,7 @@ begin
     // rewrite(ffollogs);
     // prFile := cdsFolders.FieldByName('filename').AsString;
     fmProgress.Setlabel('Building Tree. Please wait...', 1);
+//    fmProgress.
     // fmProgress.SetMaxPogress(filesize(flogs),0);
     AssignFile(ffollogs, aploc + 'follogs.dat');
     reset(ffollogs);
@@ -1259,6 +1254,7 @@ var
   iloopcnt: Integer;
 begin
   try
+    sgToCheck.Enabled := false;
     ifst := 0;
     // fmLogDisplay.vMemLogs.First;
     if tvView.Items.Count <> 0 then
@@ -1282,7 +1278,7 @@ begin
 
         fmProgress.Setlabel('Building Tree. Please wait...', 1);
         fmProgress.SetMaxPogress(filesize(ffollogs), 0);
-
+        fmProgress.FormStyle := fsStayOnTop;
         inc(ic);
         setlength(Node, ic + 1);
 
@@ -1340,7 +1336,7 @@ begin
         end;
         if (etTyp = etnobystate) then
         begin
-          sDescr := 'No by Statemetn';
+          sDescr := 'No by Statement';
         end;
 
         Node[ic] := tvView.Items.Add(nil, 'Filtering for ' + sDescr);
@@ -1544,7 +1540,9 @@ begin
     finally
       closefile(ffollogs);
     end;
+    fmProgress.FormStyle := fsNormal;
     fmProgress.Close;
+    sgToCheck.Enabled := false;
 
     result := true;
   except
@@ -1553,7 +1551,9 @@ begin
       MessageDlg('The following exception occurred in:' + #13 + #10 +
         'BuildFilterTree' + #13 + #10 + e.Message, mtWarning, [mbOK], 0);
       // pgLoad.Visible := false;
+      fmProgress.FormStyle := fsNormal;
       fmProgress.Close;
+      sgToCheck.Enabled := false;
       result := False;
     end;
   end;
@@ -1829,7 +1829,7 @@ begin
       else bbBuild.Enabled := true; *)
 
     Setuplocgrid;
-
+                                       (*
     lbNotes.Caption := 'Notes     : ' + inttostr(0);
     lbInfo.Caption := 'Info      : ' + inttostr(0);
     lbwarn.Caption := 'Warnings      : ' + inttostr(0);
@@ -1838,10 +1838,10 @@ begin
     lbDivs.Caption := 'Division by 0 : ' + inttostr(0);
     lbMerge.Caption := 'Merge Notes   : ' + inttostr(0);
     lbInvald.Caption := 'Invalid Notes : ' + inttostr(0);
-    lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lberr.Caption := 'Errors        : ' + inttostr(0);
     lbCust.Caption := 'Custom        : ' + inttostr(0);
-    lbAlloth.Caption := 'All other     : ' + inttostr(0);
+    lbAlloth.Caption := 'All other     : ' + inttostr(0);   *)
+    lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
 
     bbShowall.Visible := False;
@@ -2200,6 +2200,7 @@ begin
     itrow := sgLocations.RowCount;
 
     sFold := nil;
+    asFilePath := nil; //[D5]
 
     tvView.Items.Clear;
     ckfilelist.Items.Clear;
@@ -2226,6 +2227,7 @@ begin
       iSFcnt := 1;
       asVal := IncludeTrailingBackslash
         (ExcludeTrailingBackslash(sgLocations.Cells[0, iRow]));
+      asFilePath := nil; //[D5]
       if not bBuildlist then
       begin
         sgLocations.Cells[1, iRow] := 'Busy Reading ...';
@@ -2835,6 +2837,8 @@ var
 begin
   try
     sgToCheck.Enabled := False; // [B14]
+
+
     with sgToCheck do
     begin
       if Cells[0, sgRow] = 'Notes' then
@@ -2894,6 +2898,7 @@ begin
       MessageDlg('The following exception occurred in:' + #13 + #10 +
         'sgToCheckDblClick' + #13 + #10 + e.Message, mtWarning, [mbOK], 0);
       sgToCheck.Enabled := true;
+      sgToCheck.Visible := true; // [B14]
     end;
   end;
 end;
@@ -3044,17 +3049,17 @@ begin
     end;
 
     lbNotes.Caption := 'Notes         : ' + inttostr(0);
-    lbwarn.Caption := 'Warnings      : ' + inttostr(0);
+    (*lbwarn.Caption := 'Warnings      : ' + inttostr(0);
     lbConv.Caption := 'Conversion    : ' + inttostr(0);
     lbUninit.Caption := 'Uninitialized : ' + inttostr(0);
     lbDivs.Caption := 'Division by 0 : ' + inttostr(0);
     lbMerge.Caption := 'Merge Notes   : ' + inttostr(0);
     lbInvald.Caption := 'Invalid Notes : ' + inttostr(0);
-    lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lberr.Caption := 'Errors        : ' + inttostr(0);
-    lbInfo.Caption := 'Info          : ' + inttostr(0);
     lbCust.Caption := 'Custom        : ' + inttostr(0);
-    lbAlloth.Caption := 'All other     : ' + inttostr(0);
+    lbAlloth.Caption := 'All other     : ' + inttostr(0);*)
+    lbInfo.Caption := 'Info          : ' + inttostr(0);
+    lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lbFilesRead.Caption := 'Files Read    : ' + inttostr(0);
     lbFilesel.Caption := 'Files selected  : ';
