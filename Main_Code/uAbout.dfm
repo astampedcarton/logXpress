@@ -90,20 +90,8 @@ object fmAbout: TfmAbout
         'ADMINISTRATOR.'
         ' '
         
-          'VERY IMPORTANT: This is not OPEN SOURCE. This application may no' +
-          't be sold at all. '
-        
-          'If you are interested in selling Log Express, please contact the' +
-          ' developer via below provided email address.'
-        ''
-        
-          'The developer reserves the right to distribute Log Express eithe' +
-          'r for free or at cost to whomever I see fit.'
-        ''
-        
-          'So please report any problems, bugs or suggestions by emailing t' +
-          'he developer (Hentie du Plessis) at: '
-        'hentieduplessis@outlook.com'
+          'Report issues at: https://github.com/astampedcarton/logXpress/is' +
+          'sues'
         ''
         'Acknowledgements: '
         'Glassbutton components: http://rmklever.com/'
